@@ -19,7 +19,7 @@ var fourNum = 0
 
 
 $("#startGame").click(function() {
-    for (i = 0; i < 4; i++) { //這個for用在產生4個亂數, range在1~9內而且不會重覆
+    for (i = 0; i < 5; i++) { //這個for用在產生4個亂數, range在1~9內而且不會重覆
         isDone = false;
         while (!isDone) {
             num = Math.floor(Math.random() * 9 + 1);
@@ -27,7 +27,7 @@ $("#startGame").click(function() {
                 arrNum[i] = num;
                 arrAll[num] = true;
                 isDone = true;
-            }
+            } break;
         }
     }
     $('#tipArea').html('')
@@ -122,6 +122,7 @@ $('#inputPassword').keypress(function(e) {
          code = (e.keyCode ? e.keyCode : e.which);
          if (code == 13) {
              $("#checkNum").click();
-         }
+         };
+         
          
     });
